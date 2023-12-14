@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Official Website of Jeep® Korea -- wranger</title>
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css" />
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+  <script src="./js/script.js"></script>
+
+</head>
+<body>
+
+  <div id="container">
+        <!-- 헤더 영역 -->
+        <header id="header" class="headerbg">
+          <div id="headerWrap">
+            <div id="headerBox">
+              <a href="index.html" class="logo"><img src="./images/logo.png" alt="logo"></a>
+              <div>
+                <button class="menuBtn">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </button>
+              </div>
+            </div>
+            <!-- 네비게이션 -->
+            <nav id="nav">
+              <div id="navBox">
+                <div>
+                  <a href="#">모델소개</a>
+                  <ul>
+                    <li><a href="sub.html">GRAND CHEROKEE</a></li>
+                    <li><a href="sub.html">GRAND CHEROKEE 4EX</a></li>
+                    <li><a href="sub.html">Wranger</a></li>
+                    <li><a href="sub.html">Gladiator</a></li>
+                  </ul>
+                </div>
+                <div>
+                  <a href="sub.html">구입문의</a>
+                  <ul>
+                    <li><a href="sub.html">프로모션</a></li>
+                    <li><a href="sub.html">시승신청</a></li>
+                    <li><a href="sub.html">견적요청</a></li>
+                    <li><a href="sub.html">카탈로그 다운로드</a></li>
+                  </ul>
+                </div>
+                <div>
+                  <a href="sub.html">JEEP WAVE</a>
+                  <ul>
+                    <li><a href="sub.html">BRAND HISTORY</a></li>
+                    <li><a href="sub.html">PRESS ROOM</a></li>
+                    <li><a href="sub.html">PARTNERSHIPS</a></li>
+                  </ul>
+                </div>
+                <div>
+                  <a href="#">서비스</a>
+                  <ul>
+                    <li><a href="#">서비스 캠페인</a></li>
+                    <li><a href="#">서비스 예약</a></li>
+                    <li><a href="#">JEEP CARE</a></li>
+                  </ul>
+                </div>
+              </div>
+            </nav>
+          </div>
+        </header>
+  
+
+
+    <!-- 서브페이지 메인 -->
+
+    <div id="section1" class="section">
+      <div id="section1__wrap">
+        <div>
+          <p>WRANGER</p>
+        </div>
+        <div>
+          <img src="./images/maincar.png" alt="wrangler">
+        </div>
+        <div id="section1__txt">
+          <div class="txt1">
+            <h3>WRANGLER</h3>
+            <p>Rublicon | Overland</p>
+          </div>
+          <div class="txt2">
+            <p>최고출력(ps)</p>
+            <p class="counting-text">272</p>
+          </div>
+          <div class="txt3">
+            <p>최대토크(Nm)</p>
+            <p class="counting-text">275</p>
+          </div>
+          <div class="txt4">
+            <p>복합연비(km/l)</p>
+            <p class="counting-text">112</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- 갤러리 영역 -->
+
+    <div id="section2" class="section">
+      <div id="section2__wrap">
+        <div class="gf1">
+          <div class="section2__img"><img src="./images/gallery1.jpg" onclick="openModal(this)"></div>
+          <div class="section2__img"><img src="./images/gallery2.jpg" onclick="openModal(this)"></div>
+          <div class="section2__img"><img src="./images/gallery3.jpg" onclick="openModal(this)"></div>
+        </div>
+        <div class="gf2">
+          <div class="section2__img"><img src="./images/gallery4.jpg" onclick="openModal(this)"></div>
+          <div class="section2__img"><img src="./images/gallery5.jpg" onclick="openModal(this)"></div>
+        </div>
+
+        <div id="modal" onclick="closeModal()">
+          <div id="modalContent">
+            <!-- <span class="close" onclick="closeModal()">&times;</span> -->
+            <img id="modalImg" src="" alt="modal image">
+          </div>
+        </div>
+    </div>
+
+
+    <!-- 차 컬러 슬라이드 -->
+
+    <div id="section3" class="section">
+      <div id="section3__wrap">
+        <div>
+          <img src="./images/blue.png" alt="Color Image" id="color-image">
+        </div>
+        <div class="button-wrap">
+          <button class="color-button" data-color="blue"><span>blue</span></button>
+          <button class="color-button" data-color="red"><span>red</span></button>
+          <button class="color-button" data-color="white"><span>white</span></button>
+          <button class="color-button" data-color="black"><span>black</span></button>
+          <button class="color-button" data-color="silver"><span>silver</span></button>
+          <span class="color-txt">블루</span>
+        </div>
+        <p>*모든 차량 이미지는 실제 모델과 다를 수 있으며 사양 및 구성에 따라 상이할 수 있습니다.<br> 
+          딜러사의 재고 상황에 따라 이미지와 다른 모델로 상담 받으실 수 있습니다.</p> 
+      </div>
+    </div>
+
+
+    <!-- 영상 -->
+
+    <div id="section4" class="section">
+      <div id="section4__wrap">
+        <!-- <div class="video-txt">
+          <img src="./images/wranger.png">
+          <p>모두가 열망하는 삶 랭글러로 답하라</p>
+        </div> -->
+        <div class="play-button" id="playButton"><img src="./images/play-button.png" alt="play"></div>
+        <video id="videoPlayer" >
+          <source src="./images/video-jeep.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+
+
+    <!-- capability -->
+
+    <div id="section5" class="section">
+      <div id="section5__wrap">
+        <div>
+          <h2>CAPABILITY</h2>
+          <p>모험을 즐기는 사람들을 위한 자동차 입니다.<br>
+            4X4 시스템과 강력한 스키드 플레이트 등 WRANGLER는<br>
+           그 어떠한 상황에서도 한계를 뛰어넘는 주행 경험을 선사합니다.</p>
+        </div>
+        <img src="./images/capability.jpg" alt="capability">
+      </div>
+
+      <div id="img-wrap">
+        <div>
+          <div class="capa-content an1">
+            <img src="./images/img1.jpg">
+            <h3>TRACTION</h3>
+            <p>Wrangler는 그 명성에 걸맞게, 험난하고 예측할 수 없는 주행조건에서도 
+                탁월한 접지력과 구동력을 자랑합니다. 
+                이를 위해서는 동력을 지상에 효율적으로 전달하는 것이 핵심입니다.
+            </p>
+          </div>
+        </div>
+        <div>
+          <div class="capa-content an2">
+            <img src="./images/img2.jpg">
+            <h3>WATER FORDING</h3>
+            <p>낮은 개울이나 깊은 물 웅덩이도 문제없이 건널 수 있습니다. 
+              Wrangler는 공기 흡입구가 엔진 칸에 높이 장착되어 있으며, 
+              전기장치 연결부는 물기가 유입되지 않도록 밀폐되어 있고 
+              ,물이 침투하지 못하도록 개구부가 완전히 차단되어 있습니다.
+            </p>
+          </div>
+        </div>
+        <div>
+          <div class="capa-content an3">
+            <img src="./images/img3.jpg">
+            <h3>ARTICULATION</h3>
+            <p>서스펜션과 액슬 아티큘레이션(axle articulation)은 유연성을 극대화하여
+              오프로드 주행 성능을 향상시켜 줍니다. 
+              이를 위해서는 장애물 통과 시 휠이 지상에 접지하는 
+              시간을 극대화 시키는 것이 중요합니다.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+    <!-- exterior -->
+
+    <div id="section6" class="section">
+      <div id="section6__wrap">
+        <div>
+          <h2>EXTERIOR DESIGN</h2>
+          <p>Jeep® Wrangler는 운전의 재미와 자유를 동시에 선사합니다.<br>
+            클래식 지프 특유의 디자인과 엔지니어링을 유지한 최고의 전천후 오프로드 주행 성능은 물론,<br>
+            여기에 더해진 탈착형 탑과 도어는 진정한 자유까지 경험하게 해줍니다.</p>
+        </div>
+        <img src="./images/exterior.jpg" alt="exterior">
+      </div>
+
+      <div id="box-content">
+        <div class="box1">
+          <img src="./images/ex-close.jpg" alt="close">
+        </div>
+        <div class="box2">
+          <div class="txt-wrap">
+            <h4>MEET THE SKY<br>
+              WITH A BUTTON</h4>
+              <p>새로운 스카이 원-터치 파워탑은 버튼 조작 하나로 손쉽게 작동하며,<br> 
+                루프를 완전히 개방하는데 약 20초가 걸립니다.<br>
+                더 큰 개방감을 누리기 위해서는 후방 쿼터 윈도우 또한 탈착이 가능합니다.</p>
+                <button>OPEN</button>
+          </div>
+        </div>
+        <div class="box3">
+          <div class="txt-wrap txt-wrap-right">
+            <h4>MAKE AN ENTRANCE</h4>
+            <p>스타일리쉬하고 효율적인 조명 시스템을 제공하는 LED Lighting Group은<br> 
+              시그니처 LED 리플렉터 헤드램프와 LED 안개등, LED 주간 주행 램프, <br>
+              시선을 사로잡는 LED 테일램프로 구성되어 있으며, <br>
+              어떤 주행 조건에서도 시야를 확보해주는 첨단 <br>
+              기술과 한번 보는 순간 결코 잊을 수 없는 독창적인 디자인을 자랑합니다.</p>
+              <button>OFF</button>
+          </div>
+        </div>
+        <div class="box4"><img src="./images/ex-on.jpg"></div>
+      </div>
+    </div>
+
+
+    <!-- interior -->
+
+    <div id="section7" class="section">
+      <div id="section7__wrap">
+          <div>
+            <h2>INTERIOR DESIGN</h2>
+            <p> 놀라운 오프로드 주행 성능이 선사하는 모험과 자유는 실내 공간에서도 이어집니다.<br>
+              JEEP WRANGLER는 안락하고 편리한 실내 공간을 자랑합니다.<br>
+              중요 조작부와 수납공간 모두 손쉽게 이용이 가능할 위치에<br>
+              스마트하게 배치되어 있으며 최첨단 UCONNECT시스템은 모험하는 내내 세상과 당신을 연결합니다.</p>
+          </div>
+          <img src="./images/interior.jpg" alt="interior">
+      </div>
+
+      <div id="interior-content">
+        <div>
+          <img src="./images/in1.jpg" alt="img1">
+          <div class="inbox-txt">
+            <h4>PUSH-BUTTON START</h4>
+            <p>Jeep® Wrangler는 간편한 버튼 조작으로 시동을 걸 수 있습니다. <br>
+              시동 버튼은 방수 처리되어있으며 24 시간 침수 테스트를 통과했습니다.</p>
+          </div>
+        </div>
+        <div>
+          <img src="./images/in2.jpg" alt="img1">
+          <div class="inbox-txt">
+            <h4>RUGGED DETAILS</h4>
+            <p>노브와 버튼, 토글 장치들은 모두 최상의 기능을 구현할 수 
+              있도록 테스트를 거칩니다. Uconnect® 터치스크린과 스탑&스타트 버튼, 
+              스위치 주변은 고무 소재를 사용함으로써 실용성과 인체공학, 
+              내구성 모두를 고려하여 설계 되었습니다.</p>
+          </div>
+        </div>
+        <div>
+          <img src="./images/in3.jpg" alt="img1">
+          <div class="inbox-txt">
+            <h4>GRAB HANDLES</h4>
+            <p>보다 편리한 승하차와 오프로드 주행 시의 안정감을 위해
+              A필러와 B필러에 손잡이가 장착되어 있습니다.</p>
+          </div>
+        </div>
+        <div>
+          <img src="./images/in4.jpg" alt="img1">
+          <div class="inbox-txt">
+            <h4>HEATED FRONT SEATS</h4>
+            <p>앞좌석 열선 시트와 열선 스티어링 휠은 한번 써보면 그 필요성을 절감할 수 있는 기능들로 운전자에게 안락함을 더해줍니다. 가죽 소재의 스티어링 휠에는 전화와 음성, 오디오 등을 제어할 수 있는 편의 기능이 추가되어 있습니다. </p>
+          </div>
+        </div>
+        <div>
+          <img src="./images/in5.jpg" alt="img1">
+          <div class="inbox-txt">
+            <h4>DUAL-ZONE CONTROL</h4>
+            <p>듀얼존 오토 에어컨은 운전석과 조수석의 온도를 개별적으로 조절해 줍니다.</p>
+          </div>
+        </div>
+        <div>
+          <img src="./images/in6.jpg" alt="img1">
+          <div class="inbox-txt">
+            <h4>HEATED POWER MIRRORS</h4>
+            <p>사이드 미러에 성에가 낄 걱정이 없습니다. 열선이 내장되어 있어, 성에나 얼음을 녹여주어 가시성을 확보하고 보다 안전한 주행 환경을 제공해 줌으로써 겨울철 출근길이나 눈 덮인 오프로드를 주행할 때 편리합니다.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- 시승신청 -->
+
+    <div id="section8" class="section">
+      <div id="section8__wrap">
+        <div class="img-bg">
+          <div id="section8-content">
+            <h3>시승/상담 신청</h3>
+            <p>전시장에 가지 않고, 내 집 내 공간에서 마음에 드는 차량을 예약해 보세요.​</p>
+            <a href="#">신청하기</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- 푸터 -->
+    <footer id="site-footer">
+      <div id="footerWrap">
+        <div id="footer-icon">
+          <ul>
+            <li><a href="#"><img src="./images/facebook.png"></a></li>
+            <li><a href="#"><img src="./images/insta.png"></a></li>
+            <li><a href="#"><img src="./images/youtube.png"></a></li>
+          </ul>
+        </div>
+        <div id="footerBox">
+          <div>
+            <p>JEEP® OWNERS</p>
+            <ul>
+              <li><a href="#">Jeep® STORY</a></li>
+              <li><a href="#">Jeep® CARE</a></li>
+              <li><a href="#">Jeep® CAMP</a></li>
+            </ul>
+          </div>
+          <div>
+            <p>차량 구매하기</p>
+            <ul>
+              <li><a href="#">시승신청</a></li>
+              <li><a href="#">견적요청</a></li>
+              <li><a href="#">세일즈 프로모션</a></li>
+              <li><a href="#">전시장 검색</a></li>
+              <li><a href="#">카탈로그 다운로드</a></li>
+            </ul>
+          </div>
+          <div>
+            <p>고객 서비스</p>
+            <ul>
+              <li><a href="#">Jeep Service Campaign</a></li>
+              <li><a href="#">서비스 예약</a></li>
+              <li><a href="#">JEEP CARE</a></li>
+              <li><a href="#">Jeep 부품 가격정보</a></li>
+              <li><a href="#">자동차결함 신고센터</a></li>
+            </ul>
+          </div>
+          <div>
+            <p>모델</p>
+            <ul>
+              <li><a href="#">Grand Cherokee</a></li>
+              <li><a href="#">Grand Cherokee L</a></li>
+              <li><a href="#">Wrangler 4xe</a></li>
+              <li><a href="#">Gladiator</a></li>
+            </ul>
+          </div>
+          <div>
+            <p>BRAND STORY</p>
+            <ul>
+              <li><a href="#">BRAND HISTORY</a></li>
+              <li><a href="#">PRESSROOM</a></li>
+              <li><a href="#">PARTNERSHIPS</a></li>
+              <li><a href="#">VIDEO</a></li>
+            </ul>
+          </div>
+        </div>
+        <div id="sub-footer">
+          <ul>
+            <li>개인정보처리방침</li>
+            <li>이용약관</li>
+            <li>법적고지</li>
+            <li>LEGAL</li>
+            <li>위치정보사업 이용약관</li>
+          </ul>
+        </div>
+        <div id="sub-footer2">
+          <p>©2022 Stellantis. All Rights Reserved. Chrysler, Jeep 및 FIAT 로고는 Stellantis의 등록 상표입니다.</p>
+        </div>
+      </div>
+    </footer>
+  </div> <!-- 전체 메인-->
+</div>
+</body>
+
+<script>
+
+    window.onload = function() {
+      // 초기 선택 색상 설정 (블루로 초기 설정)
+      const initialColor = 'blue';
+      
+      // 초기 선택 색상 버튼과 이미지 설정
+      const initialButton = document.querySelector(`[data-color="${initialColor}"]`);
+      initialButton.classList.add('active'); // 선택된 버튼에 active 클래스 추가
+      changeImage(initialColor); // 초기 이미지 설정
+      
+      // 초기 텍스트 설정 (하이드로 블루로 초기 설정)
+      const colorText = document.querySelector('.color-txt');
+      colorText.textContent = '블루';
+    }
+
+    // 이미지 경로 매핑
+    const imagePaths = {
+    blue: './images/blue.png',
+    red: './images/red.png',
+    white: './images/white.png',
+    black: './images/black.png',
+    silver: './images/silver.png'
+  };
+
+// 버튼들 선택
+const colorButtons = document.querySelectorAll('.color-button');
+// 이미지 변경 함수
+function changeImage(color) {
+  const image = document.getElementById('color-image');
+  image.src = imagePaths[color];
+}
+
+// 각 버튼에 클릭 이벤트 추가
+colorButtons.forEach(button => {
+  button.addEventListener('click', function() {
+    const selectedColor = this.getAttribute('data-color');
+
+    // 이미지 변경 함수 호출
+    changeImage(selectedColor);
+
+    // 모든 버튼의 활성화 클래스 제거
+    colorButtons.forEach(btn => btn.classList.remove('active'));
+
+    // 현재 클릭한 버튼에만 활성화 클래스 추가
+    this.classList.add('active');
+
+    const colorText = document.querySelector('.color-txt');
+    let textToShow = '';
+  
+      switch (selectedColor) {
+        case 'blue':
+          textToShow = '블루';
+          break;
+
+        case 'red':
+          textToShow = '레드';
+          break;
+        case 'white':
+          textToShow = '화이트';
+          break;
+        case 'black':
+          textToShow = '블랙';
+          break;
+        case 'silver':
+          textToShow = '실버';
+          break;
+        default:
+          textToShow = '';
+          break;
+      }
+      colorText.textContent = textToShow;
+  });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+        window.addEventListener('scroll', function () {
+            handleScrollAnimation('.an1');
+            handleScrollAnimation('.an2');
+            handleScrollAnimation('.an3');
+        });
+
+        function handleScrollAnimation(selector) {
+            const element = document.querySelector(selector);
+            const elementPosition = element.getBoundingClientRect().top;
+            const viewportHeight = window.innerHeight;
+
+            // 요소가 진입할 위치를 계산합니다.
+            const entryPoint = viewportHeight * 0.8;
+
+            // 스크롤 위치가 요소의 진입 지점에 도달하면 .animate 클래스를 추가하여 요소를 나타나게 합니다.
+            if (elementPosition - entryPoint <= 0) {
+                element.classList.add('capa-animate');
+            } else {
+                element.classList.remove('capa-animate');
+            }
+        }
+});
+
+</script>
+
+</html>
