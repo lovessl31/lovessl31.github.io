@@ -194,7 +194,7 @@ footer span {font-size: 12px; color: #666; margin-top: 20px; display: block;}
   .con02 .title .en2 {font-size: 160px;}
 }
 
-/* 800px 이하 */
+/* 800px~ 501px */
 @media screen and (max-width:800px) {
     header {padding: 3% 5%; background: rgba(0, 0, 0, 0.5); box-sizing: border-box;}
     header .menuOpen { margin-left: auto; display: block; position: relative; width: 32px; height: 10px; transition: top 0.5s; z-index: 101;}
@@ -218,5 +218,22 @@ footer span {font-size: 12px; color: #666; margin-top: 20px; display: block;}
 
     .about .imgBox {width: 400px;}
     .skill .skillList {flex-wrap:wrap; top:70%;}
-    .con02 .workList li {width: 100%; margin-top: 100px;}
+    .con02 .workList li {width: 100%; margin-top:0px; margin-bottom: 100px;}
   }
+
+  /* 500px ~ */
+@media screen and (max-width:500px) {
+  .mainVisual .mainText {font-size: 50px;}
+  .textBox .title {font-size: 50px !important;}
+  .about .imgBox {width: 300px; height: 300px;}
+  .about .inner .comment {justify-content: flex-start; text-align: left;}
+
+  .con01 .title h2 {font-size: 30px}
+
+  .con02 .title {font-size: 120px;}
+  .con02 .title .en2 {font-size: 160px;}
+
+  .strengths .card .content {width: 70%;}
+  .strengths .card .content .emogi {width:40px; height:40px;}
+  .strengths .card .desc {display: block !important; margin-top:10px; font-size: 12px;}
+}

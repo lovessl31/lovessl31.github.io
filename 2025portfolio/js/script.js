@@ -86,17 +86,29 @@ $(function() {
 // 04.strengths -- 강점 슬라이드
 document.addEventListener('DOMContentLoaded', () => {
   new Swiper('.strengths-swiper', {
-    loop: false,                 // 루프 없음
-    slidesPerView: 'auto',       // 카드 고정폭이면 auto
+    loop: false,
+    slidesPerView: 'auto',
     spaceBetween: 30,
     centeredSlides: false,
     grabCursor: true,
-    speed: 500,                  // 슬라이드 전환 속도
-    freeMode: false,              // 스냅 모드 (카드에 딱 붙음)
+    speed: 500,
+    freeMode: false,
 
-    // ← 시작점 왼쪽 여백 / → 끝에서 잘리지 않게 오른쪽 여백
+    // 기본(데스크톱)
     slidesOffsetBefore: 300,
     slidesOffsetAfter: 300,
+
+    // 반응형 옵션
+    breakpoints: {
+      0: { // 0px 이상
+        slidesOffsetBefore: 60,
+        slidesOffsetAfter: 60,
+      },
+      501: { // 501px 이상
+        slidesOffsetBefore: 300,
+        slidesOffsetAfter: 300,
+      }
+    }
   });
 });
 
