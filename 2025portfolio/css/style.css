@@ -1,0 +1,222 @@
+@charset "utf-8";
+
+/* 폰트 */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Infant:ital@0;1&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@font-face {font-family: '116watermelon'; src: url('https://gcore.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.0/116watermelon.woff') format('woff'); font-weight: normal; font-style: normal;}
+
+/* reset */
+* {margin: 0;padding: 0;}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, tbody, tfoot, thead, tr, th, td {margin:0;padding:0;}
+a {color: inherit; text-decoration: inherit;}
+li {list-style: none;}
+address, em, i {font-style: normal;}
+button {background: none; border: none;}
+img {vertical-align: middle;}
+
+/* 영어폰트 */
+.en {font-family: '116watermelon', sans-serif;}
+.en2 {font-family: "Cormorant Infant", serif;}
+
+/* layout */
+body {font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif; font-size: 16px; line-height: 1.6;}
+.wrap {position: relative; margin: 0 auto; overflow: hidden; }
+
+/* header */
+header {width: 100%; position: fixed; left:0; top:0; z-index:100;}
+header .gnbWrap {display: flex; justify-content: center; margin-top: 30px;}
+header .gnbWrap .gnb {display:flex; color: #111; font-size: 14px; justify-content: center; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1), 0px 2px 4px rgba(0, 0, 0, 0.06);width: fit-content; padding: 15px 20px; border-radius: 50px; box-sizing: border-box; background: #fff;}
+header .gnbWrap .gnb li a {padding: 8px 15px; box-sizing: border-box;}
+header.active {transform: translateY(-100%);}
+header .menuOpen {display: none; transition: 0.3s;}
+
+/* mainVisual */
+.mainVisual {width: 100%; height: 100vh; overflow: hidden; position: relative; z-index:1;}
+.mainVisual .mainText {font-size: 70px; font-weight: 800; line-height: 1.2; letter-spacing: -1.2px; position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); text-align: center;}
+.mainVisual .mainText p {overflow: hidden;}
+.mainVisual .mainText .text {font-size: 14px; font-weight: 400; margin-top: 30px; letter-spacing:0; line-height: 1.4;}
+.mainVisual .textLoop {position: absolute; bottom: 0; opacity: 0.5;}
+.mainVisual .textLoop ul {display: flex; white-space: nowrap; animation: textLoop 20s linear infinite; gap:20px;}
+.mainVisual .textLoop ul li {display:flex; align-items: center; gap: 10px; flex:none;}
+.mainVisual .textLoop .icon {display:block; width:20px; height:20px; background: transparent url('../images/main_icon.svg') no-repeat center center / 100%;}
+
+@keyframes textLoop {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%);}
+}
+
+/* animation */
+.mainVisual.motion .mainText {transform: translate(-50%, -50%) translate3d(0,0,0) skewY(0deg); overflow:hidden;}
+.mainVisual.motion .mainText p span {display: block; animation-name: textAni; animation-duration: 1.8s;}
+.mainVisual.motion .mainText p:nth-child(2) span {animation-duration: 1.7s;}
+
+@keyframes textAni {
+    0% {opacity: 0;}
+    30% {opacity: 0; transform: translate3d(0,-90px,0) skewY(-10deg); transform-origin: top left;}
+}
+
+@keyframes textAni2 {
+    0% {opacity: 0;}
+    30% {opacity: 0;}
+}
+
+.mainVisual.motion .mainText {animation-name: textAni2; animation-duration: 2.3s;}
+
+/* 레이아웃 */
+.about {width: 100%; background: #111; color: #fff; overflow: hidden; position: relative;}
+.inner {width: 80%; height: 100%; margin: 0 auto; padding: 130px 0; box-sizing: border-box;}
+
+/* section02.about*/
+.about .textBox .title {font-size: 90px;}
+.about .imgBox {display: flex; justify-content: center; width:500px; height:500px; margin: 0 auto; margin-top: 100px;}
+.about .imgBox img {display: block; width: 100%; object-fit: cover;}
+.about .inner .comment {display: flex; justify-content: flex-end; text-align: right; margin-top: 100px;}
+.about .inner .comment p {font-size: 14px;}
+
+.about.motion .textBox p span {display: block; animation-name: textAni; animation-duration: 1.8s;}
+.about.motion .comment p span {display: block; animation-name: textAni; animation-duration: 3s;}
+
+/* imgBox에 active 클래스 붙었을 때 */
+.about .imgBox {position: relative; overflow: hidden; transition: all 0.4s;}
+.about .imgBox::before {content:''; width:100%; height: 100%; background: #FF9B9B; position: absolute; left: 0; top: 0; transition: all 0.8s; transition-delay: 0.4s; z-index: 2;}
+.about .imgBox::after {content:''; width:100%; height: 100%; background: #111; position: absolute; left: 0; top: 0; transition: all 0.8s; z-index: 3;}
+.about .imgBox.active::before {height: 0;}
+.about .imgBox.active::after {height: 0;}
+
+/* section02.skill */
+.skill {width: 100%; height: 100vh; background: #fff; overflow: hidden; position: relative;}
+.skill .textBox .title {font-size: 90px;}
+.skill .skillList {display: flex; justify-content: center; position: absolute; left: 50%; top: 60%; transform: translate(-50%, -60%); gap:20px} .skill .skillList li{text-align: center;}
+.skill .skillList li strong {font-size: 14px; font-weight: 400; margin-top: 10px; display: block;}
+.skill .skillList .bg {width: 114px; height: 114px; display: block; border: 2px solid #111; box-sizing: border-box;
+background: #E9E9E9; display: flex; justify-content: center; align-items: center;
+border-radius: 22px;}
+.skill .skillList .bg.ai {background: #fff radial-gradient(#555 1px, transparent 1px) center / 6px 6px;}
+.skill .skillList .bg.html {background: #fff;}
+.skill .skillList .bg.css {background:#fff repeating-linear-gradient(45deg, #555 0px, #555 1px, transparent 1px, transparent 6px) center / 8px 8px;}
+
+/* section03.strength */
+.strengths {width: 100%; background: #111; position: relative; color: #fff; padding-bottom: 120px;}
+.strengths .textBox {width:80%; margin: 0 auto; padding-top: 120px; box-sizing: border-box;}
+.strengths .textBox .title {font-size: 90px;}
+.strengths .swiper-slide {width: 280px}
+.strengths .card {width: 100%; height: 370px; border: 2px solid #fff; border-radius: 30px; text-align: center; display:flex; justify-content: center; align-items: center; transition:all 0.3s ease;}
+.strengths .card .content {display: flex; flex-direction: column; align-items: center; width: 60%;}
+.strengths .card .content .emogi {width: 55px; height: 55px;}
+.strengths .card .content .emogi img {width: 100%; display: block;}
+.strengths .card .content .title {font-size: 20px; font-weight: 800; margin-top: 20px;}
+.strengths .card .content .desc {transition:all 0.3s ease; display:none}
+.strengths .strengths-swiper {margin-top: 50px; padding-top: 30px;}
+
+/* animation */
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+  40% {transform: translateY(-8px);}
+  60% {transform: translateY(-4px);}
+}
+
+@keyframes fadeInWords {
+  to { opacity: 1; }
+}
+
+/* section04.work */
+/* section.con01 */
+.con01 {width: 100vw; height: 100vh; position: relative; background: #111; color: #fff;}
+.con01 .videoWrap video {width: 100vw; height: 100vh; object-fit: cover; position: absolute; left: 0; top: 0;}
+.con01 .title {position: absolute; left: 0; top: 50%; transform: translateY(-50%); text-align: center; width: 100%; color: #fff;}
+.con01 .title h2 {font-size: 80px; font-weight: 400; letter-spacing: -1px; line-height: 1.2;}
+
+/* section.con02 */
+.con02 .title {width: 100%; height: 100vh; font-size: 170px; line-height: 0.9; text-align: center; padding-top: 30vh; box-sizing: border-box;}
+.con02 .title .en2 {font-size: 220px;}
+.con02 .workList {width: 70%; margin:0 auto; display: flex; flex-wrap: wrap; justify-content: space-between;}
+.con02 .workList li {width: 45%; margin-top: 200px;}
+.con02 .workList li:nth-child(2n) {margin-top: 0;}
+.con02 .workList li a {display: block;}
+.con02 .workList li a .imgBox img {width: 100%;}
+.con02 .workList li a .textBox h3 {font-size: 35px; font-weight: normal; margin: 20px 0 5px;}
+.con02 .workList li a .textBox .info {display: flex; justify-content: space-between; color: #888;}
+
+/* con02. workList hover */
+
+.con02 .workList li a .imgBox {position: relative;}
+.con02 .workList li a .imgBox:before {content: ''; width: 168px; height: 168px; border: 1px solid #fff; border-radius: 100%;
+background: url(../images/readMore2.png) no-repeat center/35px; position: absolute; left: 50%; top: 50%; z-index: 1;
+transform: translate(-50%, -50%) rotate(45deg); transition: all 0.3s; opacity: 0;}
+.con02 .workList li a .imgBox:after {content:''; width: 0px; height: 0px; border-radius: 100%;
+background: #fff url(../images/readMore3.png) no-repeat center / 160px; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
+animation-name : spin; animation-duration: 10s; animation-iteration-count: infinite; animation-timing-function: linear; transition: 0.4s;
+z-index: 1;}
+
+@keyframes spin {
+    0% {transform: translate(-50%, -50%) rotate(0deg);}
+    100% {transform: translate(-50%, -50%) rotate(360deg);}
+}
+
+/* footer */
+footer {height: 340px; background: #000; color: #fff; display: flex; justify-content: center; align-items: center; text-align: center; padding-top: 500px;}
+footer p {font-size: 14px; line-height: 1.2;}
+footer span {font-size: 12px; color: #666; margin-top: 20px; display: block;}
+
+
+/* hover */
+@media screen and (min-width:900px) {
+  header .gnbWrap .gnb li:hover a {background:#111; color:#FF9B9B; border-radius: 50px;}
+
+  .strengths .card:hover {border-color: #FF9B9B; transform: translateY(-20px);}
+  .strengths .card:hover .emogi {width: 40px; animation: bounce 0.6s ease;}
+  .strengths .card:hover .title {font-size: 16px; font-weight: 600; margin-top: 0px;}
+  .strengths .card:hover .desc {display: block; font-size: 14px; font-weight: 400; word-break: keep-all; margin-top: 10px;  opacity: 0; animation: fadeInWords 0.5s forwards;}
+
+  .con02 .workList li a:hover .imgBox::before {opacity: 1; z-index: 2;}
+  .con02 .workList li a:hover .imgBox::after {width: 168px; height: 168px;}
+  .con02 .workList li a:hover .imgBox img {filter: brightness(50%);}
+}
+
+/* responsiveWeb */
+/* pc 1650px ~ 1301px */
+@media screen and (max-width:1650px) {
+  footer {padding-top: 300px;}
+}
+
+/* 1300px ~ 1025px */
+@media screen and (max-width:1300px) {
+  
+}
+
+/* 1024px ~ 801px */
+@media screen and (max-width:1024px) {
+  .skill .skillList .bg {width: 80px; height: 80px;}
+  .skill .skillList .bg img {width: 50px;}
+  
+  .con01 .title h2 {font-size: 60px}
+
+  .con02 .title {font-size: 120px;}
+  .con02 .title .en2 {font-size: 160px;}
+}
+
+/* 800px 이하 */
+@media screen and (max-width:800px) {
+    header {padding: 3% 5%; background: rgba(0, 0, 0, 0.5); box-sizing: border-box;}
+    header .menuOpen { margin-left: auto; display: block; position: relative; width: 32px; height: 10px; transition: top 0.5s; z-index: 101;}
+    header .menuOpen span.a {position: absolute; left: 0; top: 0; width: 100%; height: 1px; background: #fff; transition: .3s;}
+    header .menuOpen span.b {position: absolute; left: 0; bottom: 0; width: 100%; height: 1px; background: #fff; transition: .3s;}
+    .gnbWrap {position: fixed; width: 0%; height: 0%; overflow: hidden; background: #fff; left: 0; top: -100%; color: #000; z-index: 100; transition: top 0.5s;}
+    .gnb {width: 80% !important; margin: 20% auto; flex-direction: column; box-shadow: none !important;}
+    .gnb li {margin-left: 0;}
+    .gnb li a {font-size: 10vw; line-height: 1.4; letter-spacing: -1px;}
+    .gnb li:nth-child(2n) a {font-family: 'Cormorant Ifant',serif;}
+    .gnb li a .char {color: #000; overflow: inherit;}
+    .gnb li a .char::before,
+    .gnb li a .char::after {display: none;}
+
+    /* menuOpen 이벤트 */
+    .gnbWrap.on {width: 100%; height: 100vh; top:0;}
+    body.on {overflow: hidden;}
+    body.on header {background: transparent;}
+    header .menuOpen.on span.a {background: #000; transform: rotate(45deg) translate(5px, 5px);}
+    header .menuOpen.on span.b {background: #000; transform: rotate(-45deg) translate(2px, -1px);}
+
+    .about .imgBox {width: 400px;}
+    .skill .skillList {flex-wrap:wrap; top:70%;}
+    .con02 .workList li {width: 100%; margin-top: 100px;}
+  }
